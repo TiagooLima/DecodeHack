@@ -1,4 +1,4 @@
-import { ChartColumn, CircleHelp, Landmark, Moon, Sun } from 'lucide-react';
+import { ChartColumn, Landmark, Moon, Sun } from 'lucide-react';
 import { useTheme } from '../../features/decoder/hooks/useTheme'; 
 
 function ThemeToggle() {
