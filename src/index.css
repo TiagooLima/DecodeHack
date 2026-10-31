@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import 'tailwindcss';
+
+
+*{
+    font-family: "Inter";
+}
+
+:root {
+  --bg: #f2f1ec;
+  --surface: #faf9f6;
+  --surface-2: #e9e8e2;
+  --input: #f6f5f1;
+  --border: #dddbd3;
+  --border-strong: #c4c2b9;
+  --text: #151515;
+  --text-secondary: #5a5955;
+  --text-muted: #8c8b85;
+  --primary: #151515;
+  --primary-text: #f5f5f2;
+  --danger: #b42318;
+}
+
+.dark {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --surface-2: #1c1c1c;
+  --input: #0b0b0b;
+  --border: #232323;
+  --border-strong: #3a3a3a;
+  --text: #ffffff;
+  --text-secondary: #a3a3a3;
+  --text-muted: #6b6b6b;
+  --primary: #f5f5f2;
+  --primary-text: #0a0a0a;
+  --danger: #f87171;
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-border-strong: var(--border-strong);
+  --color-text: var(--text);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-muted: var(--text-muted);
+  --color-primary: var(--primary);
+  --color-primary-text: var(--primary-text);
+  --color-danger: var(--danger);
+}
+
+/* styles/theme.css */
+@layer base {
+  html {
+    background-color: var(--bg);
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    min-height: 100dvh;
+    background-color: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
